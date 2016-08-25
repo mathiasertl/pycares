@@ -6,7 +6,7 @@ Build-Depends:
     debhelper (>=9),
     dh-python,
     python3-all,
-    python3-setuptools
+    python3-setuptools,
     python-all,
     python-docutils,
     python-setuptools,
