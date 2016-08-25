@@ -21,8 +21,8 @@ X-Python-Version: >= 2.7
 X-Python3-Version: >= 3.3
 
 Package: python-pycares
-Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
 Suggests: python-pycares-doc
 Description: Python interface for c-ares (Python 2)
  pycares is a Python module which provides an interface to c-ares. c-ares is a
@@ -31,8 +31,8 @@ Description: Python interface for c-ares (Python 2)
  This package installs the library for Python 2.
 
 Package: python3-pycares
-Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}
+Architecture: any
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
 Suggests: python-pycares-doc
 Description: Python interface for c-ares (Python 3)
  pycares is a Python module which provides an interface to c-ares. c-ares is
