@@ -42,6 +42,7 @@ Description: Python interface for c-ares (Python 3)
 
 Package: python-pycares-doc
 Architecture: all
+Section: doc
 Depends: ${sphinxdoc:Depends}, ${misc:Depends}
 Suggests: python-pycares-doc
 Description: Python interface for c-ares (common documentation)
