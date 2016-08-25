@@ -2,22 +2,48 @@ Source: pycares
 Section: python
 Priority: optional
 Maintainer: Tanguy Ortolo <tanguy+debian@ortolo.eu>
-Build-Depends: debhelper (>=9)
+Build-Depends:
+    debhelper (>=9),
+    dh-python,
+    python3-all,
+    python3-setuptools
+    python-all,
+    python-docutils,
+    python-setuptools,
+    python-sphinx,
 Standards-Version: 3.9.8
 Homepage: https://github.com/saghul/pycares
 Vcs-Git: https://git.ortolo.eu/git/pkg-pycares.git
 Vcs-Browser: https://git.ortolo.eu/pkg-pycares.git
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.3
 
 Package: python-pycares
 Architecture: all
-Depends: ${misc:Depends}
-Description: Python interface for c-ares
+Depends: ${misc:Depends}, ${python:Depends}
+Suggests: python-pycares-doc
+Description: Python interface for c-ares (Python 2)
  pycares is a Python module which provides an interface to c-ares. c-ares is a
  C library that performs DNS requests and name resolutions asynchronously.
+ .
+ This package installs the library for Python 2.
 
 Package: python3-pycares
 Architecture: all
-Depends: ${misc:Depends}
-Description: Python 3 interface for c-ares
+Depends: ${misc:Depends}, ${python3:Depends}
+Suggests: python-pycares-doc
+Description: Python interface for c-ares (Python 3)
+ pycares is a Python module which provides an interface to c-ares. c-ares is
+ a C library that performs DNS requests and name resolutions asynchronously.
+ .
+ This package installs the library for Python 3.
+
+Package: python-pycares-doc
+Architecture: all
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Suggests: python-pycares-doc
+Description: Python interface for c-ares (common documentation)
  pycares is a Python 3 module which provides an interface to c-ares. c-ares is
  a C library that performs DNS requests and name resolutions asynchronously.
+ .
+ This is the common documentation package.
