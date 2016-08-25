@@ -1,5 +1,5 @@
 pycares (2.1.0-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release (Closes: #835348)
 
  -- Tanguy Ortolo <tanguy+debian@ortolo.eu>  Thu, 25 Aug 2016 15:39:48 +0200
