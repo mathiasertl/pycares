@@ -1,17 +1,32 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pycares
-Source: <url://example.com>
+Source: <https://github.com/saghul/pycares>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
-License: MIT
+Copyright: 2012 Saúl Ibarra Corretgé
+License: Expat
 
 Files: debian/*
 Copyright: 2016 Tanguy Ortolo <tanguy+debian@ortolo.eu>
-License: MIT
+License: Expat
 
-License: MIT
+Files: deps/c-ares/*
+Copyright:
+    1998-2000 Massachusetts Institute of Technology
+    2004-2016 Daniel Stenberg
+    2004-2016 c-ares contributors
+License: MIT-old-noadvert
+
+Files:
+    deps/c-ares/src/bitncmp.c
+    deps/c-ares/src/inet_net_pton.c
+    deps/c-ares/src/inet_ntop.c
+Copyright:
+    2004 Internet Systems Consortium, Inc. ("ISC")
+    1996 Internet Software Consortium
+License: MIT-old-disclaimer
+
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation
@@ -30,7 +45,28 @@ License: MIT
  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# Please also look if there are files or directories which have a
-# different copyright/license attached and list them here.
-# Please avoid picking licenses with terms that are more restrictive than the
-# packaged work, as it may make Debian's contributions unacceptable upstream.
+License: MIT-old-noadvert
+ Permission to use, copy, modify, and distribute this
+ software and its documentation for any purpose and without
+ fee is hereby granted, provided that the above copyright
+ notice appear in all copies and that both that copyright
+ notice and this permission notice appear in supporting
+ documentation, and that the name of M.I.T. not be used in
+ advertising or publicity pertaining to distribution of the
+ software without specific, written prior permission.
+ M.I.T. makes no representations about the suitability of
+ this software for any purpose.  It is provided "as is"
+ without express or implied warranty.
+
+License: MIT-old-disclaimer
+ Permission to use, copy, modify, and distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND ISC DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS.  IN NO EVENT SHALL ISC BE LIABLE FOR
+ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
