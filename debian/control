@@ -1,15 +1,23 @@
 Source: pycares
-Section: unknown
+Section: python
 Priority: optional
 Maintainer: Tanguy Ortolo <tanguy+debian@ortolo.eu>
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.8
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://anonscm.debian.org/collab-maint/pycares.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/pycares.git
+Homepage: https://github.com/saghul/pycares
+Vcs-Git: https://git.ortolo.eu/git/pkg-pycares.git
+Vcs-Browser: https://git.ortolo.eu/pkg-pycares.git
 
-Package: pycares
+Package: python-pycares
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Python interface for c-ares
+ pycares is a Python module which provides an interface to c-ares. c-ares is a
+ C library that performs DNS requests and name resolutions asynchronously.
+
+Package: python3-pycares
+Architecture: all
+Depends: ${misc:Depends}
+Description: Python 3 interface for c-ares
+ pycares is a Python 3 module which provides an interface to c-ares. c-ares is
+ a C library that performs DNS requests and name resolutions asynchronously.
