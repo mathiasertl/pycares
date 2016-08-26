@@ -1,3 +1,13 @@
+Description: Fix Sphinx configuration so the documentation can be built
+ The Sphinx configuration searches for the pycares version number in
+ ../setup.py, which fails as it is no longer here.
+ .
+ This patch makes it look in the correct place ../pycares/_version.py.
+Author: Tanguy Ortolo <tanguy+debian@ortolo.eu>
+Bug: https://github.com/saghul/pycares/issues/33
+Last-Update: 2016-08-26
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 Index: pycares/docs/conf.py
 ===================================================================
 --- pycares.orig/docs/conf.py
