@@ -9,6 +9,12 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 export PYBUILD_NAME = pycares
 
 %:
-	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
+override_dh_auto_build:
+	dh_auto_build
+	make -C docs html
 
+override_dh_auto_clean:
+	dh_auto_clean
+	make -C docs clean

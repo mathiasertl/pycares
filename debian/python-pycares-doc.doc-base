@@ -1,0 +1,9 @@
+Document: python-pycares
+Title: python-pycares API documentation
+Author: Saúl Ibarra Corretgé
+Abstract: This manual documents the python-pycares API
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-pycares-doc/html/index.html
+Files: /usr/share/doc/python-pycares-doc/html/*.html
