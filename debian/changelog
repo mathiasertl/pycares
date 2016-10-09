@@ -1,6 +1,7 @@
 pycares (2.1.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * debian/patches: remove fix-doc-build.patch which as been applied upstream.
 
  -- Tanguy Ortolo <tanguy@bradbury.ortolo.eu>  Sun, 09 Oct 2016 16:58:28 +0200
 
