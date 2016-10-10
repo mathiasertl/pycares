@@ -1,4 +1,4 @@
-pycares (2.1.1-1) UNRELEASED; urgency=medium
+pycares (2.1.1-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/patches: remove fix-doc-build.patch which as been applied upstream.
