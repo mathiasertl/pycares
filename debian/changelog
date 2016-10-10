@@ -2,6 +2,8 @@ pycares (2.1.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * debian/patches: remove fix-doc-build.patch which as been applied upstream.
+  * debian/watch: use substitutions to make it more generic, and do not use
+    uupdate automatically.
 
  -- Tanguy Ortolo <tanguy+debian@ortolo.eu>  Sun, 09 Oct 2016 16:58:28 +0200
 
