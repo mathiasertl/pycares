@@ -11,6 +11,22 @@ export PYBUILD_NAME = pycares
 %:
 	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
 
+override_dh_auto_configure:
+	dh_auto_configure
+	# Copy configure files to regenerate ares_config.h
+	cp debian/add-ons/configure/* deps/c-ares/src
+	# Run configure script
+	deps/c-ares/src/configure
+	# We are only interested in ares_config.h, therefore removing
+	# other generated files. We do that here rather than on clean
+	# because the Makefile could get used at build!
+	rm -rf .deps Makefile ares_build.h config.log config.status \
+	    libcares.pc stamp-h1 stamp-h2
+	# Remove configure files
+	rm $(addprefix deps/c-ares/src/,$(notdir $(wildcard debian/add-ons/configure/*)))
+	# Put the ares_config.h in the appropriate directory
+	mv ares_config.h deps/c-ares/src
+
 override_dh_auto_build:
 	dh_auto_build
 	make -C docs html
@@ -18,3 +34,5 @@ override_dh_auto_build:
 override_dh_auto_clean:
 	dh_auto_clean
 	make -C docs clean
+	# Remove the generated ares_config.h
+	rm -f deps/c-ares/src/ares_config.h
