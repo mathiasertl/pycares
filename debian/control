@@ -14,6 +14,7 @@ Build-Depends:
     python-setuptools,
     python-sphinx,
     python-sphinx-rtd-theme,
+    python3-sphinx-rtd-theme,
 Standards-Version: 3.9.8
 Homepage: https://github.com/saghul/pycares
 Vcs-Git: https://git.ortolo.eu/git/pkg-pycares.git
